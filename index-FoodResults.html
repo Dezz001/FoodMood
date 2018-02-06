@@ -37,56 +37,6 @@
 
 <body>
 
-	<!-- Header -->
-<div class="camera">
-    <video id="video"></video>
-    <button id="takePicture">Take photo</button>
-</div>
-
-<<<<<<< HEAD
-=======
-
-	<!-- Blah Blah Blah -->
-
-=======
->>>>>>> 5741d3646149cfb9d010f2be756c729c22cd2ebe
-<canvas id="canvas">
-</canvas>
-  
-
-<script type="text/javascript">
-
-
-// define constraints, audio, video or both
-var constraints = { video: true, width: 150, height: 150};
-
-// MediaDevices.getUserMedia()  With the user's permission through a prompt, turns on a camera or screensharing and/or a microphone on the system and provides a MediaStream containing a video track and/or an audio track with the input.
-navigator.mediaDevices.getUserMedia(constraints)
-
-.then(function(stream) {
-        video.srcObject = stream;
-        video.play();
-    })
-    .catch(function(err) {
-        console.log("An error occured! " + err);
-    });
-
-// still in process
-// takePicture.addEventListener('click', function(ev){
-//       takepicture();
-//       ev.preventDefault();
-//     }, false);
-<<<<<<< HEAD
-=======
-
->>>>>>> 5741d3646149cfb9d010f2be756c729c22cd2ebe
-
-
-	<!-- Output Table -->
-
-
-
-	<!-- Submit Form  -->
 
 
 
