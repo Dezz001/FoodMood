@@ -1,0 +1,103 @@
+body {
+    animation: colorchange 10s; /* animation-name followed by duration in seconds*/
+       /* you could also use milliseconds (ms) or something like 2.5s */
+    -webkit-animation: colorchange 50s; /* Chrome and Safari */
+  }
+
+  @keyframes colorchange
+ 
+  {
+    0%  {background: #bbdefb;}
+    5%  {background: #64b5f6;}
+    10% {background: #2196f3;}
+    15%  {background: #1976d2;}
+    20%  {background: #2196f3;}
+    25%  {background: #64b5f6;}
+    30% {background: #bbdefb;}
+    35%  {background: #64b5f6;}
+    40%  {background: #2196f3;}
+    45%  {background: #1976d2;}
+    50% {background: #2196f3;}
+    55%  {background: #64b5f6;}
+    60%  {background: #bbdefb;}
+    65%  {background: #64b5f6;}
+    70% {background: #2196f3;}
+    75%  {background: #1976d2;}
+    80%  {background: #2196f3;}
+    85%  {background: #64b5f6;}
+    90% {background: #bbdefb;}
+    95%  {background: #64b5f6;}
+    100%  {background: #2196f3;}
+  }
+  @-webkit-keyframes colorchange /* Safari and Chrome - necessary duplicate */
+  
+  
+  {
+    0%  {background: #bbdefb;}
+    5%  {background: #64b5f6;}
+    10% {background: #2196f3;}
+    15%  {background: #1976d2;}
+    20%  {background: #2196f3;}
+    25%  {background: #64b5f6;}
+    30% {background: #bbdefb;}
+    35%  {background: #64b5f6;}
+    40%  {background: #2196f3;}
+    45%  {background: #1976d2;}
+    50% {background: #2196f3;}
+    55%  {background: #64b5f6;}
+    60%  {background: #bbdefb;}
+    65%  {background: #64b5f6;}
+    70% {background: #2196f3;}
+    75%  {background: #1976d2;}
+    80%  {background: #2196f3;}
+    85%  {background: #64b5f6;}
+    90% {background: #bbdefb;}
+    95%  {background: #64b5f6;}
+    100%  {background: #2196f3;}
+  }
+
+#logo {
+    width: 500px;
+    position: fixed;
+    top: 0%;
+    left: 28%;
+
+   
+}
+ #button-1 {
+    position: fixed;
+    bottom: 20%;
+    left: 32%;
+    width: 400px;
+    border-radius: 7px;
+    background-color: #d80e0e;
+
+ }
+
+ #button-1:hover {
+     opacity: 0.9;
+     -webkit-animation: none;
+ }
+.pulse {
+    animation-name: stretch;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-out;
+    animation-delay: 0s;
+    animation-play-state: running;
+}
+
+/*
+
+<!-- Added Materialize -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+  
+
+
+
+<div class="pulse">
+<img src="assets/images/logo1.png" class="pulse" id="logo">
+</div>
+
+
+<a class="btn btn-floating btn-large pulse" id="button-1"><i class="material-icons">TELL ME WHAT I WANT TO EAT!</i></a>
+

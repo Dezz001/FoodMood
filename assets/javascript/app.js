@@ -1,5 +1,6 @@
 
 
+
 // Initialize Firebase
 // var config = {
 // 	apiKey: 
@@ -67,3 +68,4 @@
 // 		console.log("Errors Handled: " + errorObject.code);
 // 	}
 // );
+
