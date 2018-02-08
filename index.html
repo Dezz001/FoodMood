@@ -102,7 +102,7 @@ navigator.mediaDevices.getUserMedia(constraints)
   var localMediaStream = document.querySelector(video.srcObject);
 
   function snapshot() {
-  	    if (localMediaStream) {
+  	  if (localMediaStream) {
       ctx.drawImage(video, 0, 0);
       document.querySelector('img').src = canvas.toDataURL('image/webp');
     }
@@ -114,25 +114,25 @@ document.querySelector("#start-camera").onclick = function(e) {
 	console.log(snap)
 
 // Need a name for emoji face "button"
- $("#button-1").on("click", function() {
-      var queryURL = "https://api-us.faceplusplus.com/facepp/v3/detect";
+  $("#button-1").on("click", function() {
+      var queryURL = "https://cors-anywhere.herokuapp.com/https://api-us.faceplusplus.com/facepp/v3/detect";
       // the ajax will call to the URL with a promise to return the data when it is available. 
-      $.ajax({
+       $.ajax({
         url: queryURL,
         method: "POST",
         data: {
-          api_key:"p6UKO6ReXnPt97o_onB63zBEqgN9lid",
+          api_key:"p6UKO6ReXnPt97o_onB63zBEqgN9lid-",
           api_secret:"j6FMcivnXOlnv9V9JXem932TziruiJby",
-          image_base64: "snap",
-          return_attributes: "emotion"
-        }
+          image_base64: snap,
+          return_attributes:"emotion"
+         }
       }).done(function(response) {
 
       var results = response.data;
-      console.log(results);
+      console.log(response);
       });
     });
-    };
+};
 
 	// <!-- Output Table -->
 
