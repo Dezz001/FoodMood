@@ -1,3 +1,176 @@
+body {
+    
+     animation: colorchange 10s; /* animation-name followed by duration in seconds*/
+        /* you could also use milliseconds (ms) or something like 2.5s */
+    -webkit-animation: colorchange 50s; /* Chrome and Safari */
+  }
+ 
+   @keyframes colorchange
+  
+   {
+     0%  {background: rgb(1, 233, 250);}
+     5%  {background: rgb(0, 255, 213);}
+     10% {background: rgb(1, 233, 250);}
+     15%  {background: rgb(0, 255, 213);}
+     20%  {background: rgb(1, 233, 250);}
+     25%  {background: rgb(0, 255, 213);}
+     30% {background: rgb(1, 233, 250);}
+     35%  {background: rgb(0, 255, 213);}
+     40%  {background: rgb(1, 233, 250);}
+     45%  {background: rgb(0, 255, 213);}
+     50% {background: rgb(1, 233, 250);}
+     55%  {background: rgb(0, 255, 213);}
+     60%  {background: rgb(1, 233, 250);}
+     65%  {background: rgb(0, 255, 213);}
+     70% {background: rgb(1, 233, 250);}
+     75%  {background: rgb(0, 255, 213);}
+     80%  {background: rgb(1, 233, 250);}
+     85%  {background: rgb(0, 255, 213);}
+     90% {background: rgb(1, 233, 250);}
+     95%  {background: rgb(0, 255, 213);}
+     100%  {background: rgb(1, 233, 250);}
+   }
+ 
+   @-webkit-keyframes colorchange /* Safari and Chrome - necessary duplicate */
+   
+   {
+     0%  {background: rgb(1, 233, 250);}
+     5%  {background: rgb(0, 255, 213);}
+     10% {background: rgb(1, 233, 250);}
+     15%  {background: rgb(0, 255, 213);}
+     20%  {background: rgb(1, 233, 250);}
+     25%  {background: rgb(0, 255, 213);}
+     30% {background: rgb(1, 233, 250);}
+     35%  {background: rgb(0, 255, 213);}
+     40%  {background: rgb(1, 233, 250);}
+     45%  {background: rgb(0, 255, 213);}
+     50% {background: rgb(1, 233, 250);}
+     55%  {background: rgb(0, 255, 213);}
+     60%  {background: rgb(1, 233, 250);}
+     65%  {background: rgb(0, 255, 213);}
+     70% {background: rgb(1, 233, 250);}
+     75%  {background: rgb(0, 255, 213);}
+     80%  {background: rgb(1, 233, 250);}
+     85%  {background: rgb(0, 255, 213);}
+     90% {background: rgb(1, 233, 250);}
+     95%  {background: rgb(0, 255, 213);}
+     100%  {background: rgb(1, 233, 250);}
+   
+ }
+
 .emoji {
-    width: 200px;
+    width: 250px;
 }
+#main-content {
+
+}
+
+#sub-content {
+    text-align: center;
+ }
+
+ #button-1 {
+    position: fixed;
+    bottom: 20%;
+    left: 15%;
+    width: 400px;
+    border-radius: 7px;
+    background-color:#5525f0;
+ }
+
+ #button-1:hover {
+    opacity: 0.9;
+    -webkit-animation: none;
+}
+
+
+ #button-2 {
+    position: fixed;
+    bottom: 20%;
+    right: 15%;
+    width: 400px;
+    border-radius: 7px;
+    background-color:#5525f0;
+ }
+
+ #button-2:hover {
+    opacity: 0.9;
+    -webkit-animation: none;
+}
+
+
+#emotion-text {
+    border-radius: 7px;
+}
+
+#emoji-display {
+    margin-top: 8%;
+    text-align: center;
+    
+}
+
+#emotion-display-text {
+    font-size: 80px;
+    
+    animation: colorchange 10s; /* animation-name followed by duration in seconds*/
+       /* you could also use milliseconds (ms) or something like 2.5s */
+    -webkit-animation: colorchange 50s; /* Chrome and Safari */
+  }
+
+  @keyframes colorchange
+ 
+  {
+    0%  {background: rgb(1, 233, 250);}
+    5%  {background: rgb(0, 255, 213);}
+    10% {background: rgb(1, 233, 250);}
+    15%  {background: rgb(0, 255, 213);}
+    20%  {background: rgb(1, 233, 250);}
+    25%  {background: rgb(0, 255, 213);}
+    30% {background: rgb(1, 233, 250);}
+    35%  {background: rgb(0, 255, 213);}
+    40%  {background: rgb(1, 233, 250);}
+    45%  {background: rgb(0, 255, 213);}
+    50% {background: rgb(1, 233, 250);}
+    55%  {background: rgb(0, 255, 213);}
+    60%  {background: rgb(1, 233, 250);}
+    65%  {background: rgb(0, 255, 213);}
+    70% {background: rgb(1, 233, 250);}
+    75%  {background: rgb(0, 255, 213);}
+    80%  {background: rgb(1, 233, 250);}
+    85%  {background: rgb(0, 255, 213);}
+    90% {background: rgb(1, 233, 250);}
+    95%  {background: rgb(0, 255, 213);}
+    100%  {background: rgb(1, 233, 250);}
+  }
+
+  @-webkit-keyframes colorchange /* Safari and Chrome - necessary duplicate */
+  
+  {
+    0%  {background: rgb(1, 233, 250);}
+    5%  {background: rgb(0, 255, 213);}
+    10% {background: rgb(1, 233, 250);}
+    15%  {background: rgb(0, 255, 213);}
+    20%  {background: rgb(1, 233, 250);}
+    25%  {background: rgb(0, 255, 213);}
+    30% {background: rgb(1, 233, 250);}
+    35%  {background: rgb(0, 255, 213);}
+    40%  {background: rgb(1, 233, 250);}
+    45%  {background: rgb(0, 255, 213);}
+    50% {background: rgb(1, 233, 250);}
+    55%  {background: rgb(0, 255, 213);}
+    60%  {background: rgb(1, 233, 250);}
+    65%  {background: rgb(0, 255, 213);}
+    70% {background: rgb(1, 233, 250);}
+    75%  {background: rgb(0, 255, 213);}
+    80%  {background: rgb(1, 233, 250);}
+    85%  {background: rgb(0, 255, 213);}
+    90% {background: rgb(1, 233, 250);}
+    95%  {background: rgb(0, 255, 213);}
+    100%  {background: rgb(1, 233, 250);}
+  }
+    
+
+
+
+
+

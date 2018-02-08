@@ -1,61 +1,62 @@
 body {
+   
     animation: colorchange 10s; /* animation-name followed by duration in seconds*/
        /* you could also use milliseconds (ms) or something like 2.5s */
-    -webkit-animation: colorchange 50s; /* Chrome and Safari */
-  }
+   -webkit-animation: colorchange 50s; /* Chrome and Safari */
+ }
 
   @keyframes colorchange
  
   {
-    0%  {background: #bbdefb;}
-    5%  {background: #64b5f6;}
-    10% {background: #2196f3;}
-    15%  {background: #1976d2;}
-    20%  {background: #2196f3;}
-    25%  {background: #64b5f6;}
-    30% {background: #bbdefb;}
-    35%  {background: #64b5f6;}
-    40%  {background: #2196f3;}
-    45%  {background: #1976d2;}
-    50% {background: #2196f3;}
-    55%  {background: #64b5f6;}
-    60%  {background: #bbdefb;}
-    65%  {background: #64b5f6;}
-    70% {background: #2196f3;}
-    75%  {background: #1976d2;}
-    80%  {background: #2196f3;}
-    85%  {background: #64b5f6;}
-    90% {background: #bbdefb;}
-    95%  {background: #64b5f6;}
-    100%  {background: #2196f3;}
-  }
-  @-webkit-keyframes colorchange /* Safari and Chrome - necessary duplicate */
-  
-  
-  {
-    0%  {background: #bbdefb;}
-    5%  {background: #64b5f6;}
-    10% {background: #2196f3;}
-    15%  {background: #1976d2;}
-    20%  {background: #2196f3;}
-    25%  {background: #64b5f6;}
-    30% {background: #bbdefb;}
-    35%  {background: #64b5f6;}
-    40%  {background: #2196f3;}
-    45%  {background: #1976d2;}
-    50% {background: #2196f3;}
-    55%  {background: #64b5f6;}
-    60%  {background: #bbdefb;}
-    65%  {background: #64b5f6;}
-    70% {background: #2196f3;}
-    75%  {background: #1976d2;}
-    80%  {background: #2196f3;}
-    85%  {background: #64b5f6;}
-    90% {background: #bbdefb;}
-    95%  {background: #64b5f6;}
-    100%  {background: #2196f3;}
+    0%  {background: rgb(1, 233, 250);}
+    5%  {background: rgb(0, 255, 213);}
+    10% {background: rgb(1, 233, 250);}
+    15%  {background: rgb(0, 255, 213);}
+    20%  {background: rgb(1, 233, 250);}
+    25%  {background: rgb(0, 255, 213);}
+    30% {background: rgb(1, 233, 250);}
+    35%  {background: rgb(0, 255, 213);}
+    40%  {background: rgb(1, 233, 250);}
+    45%  {background: rgb(0, 255, 213);}
+    50% {background: rgb(1, 233, 250);}
+    55%  {background: rgb(0, 255, 213);}
+    60%  {background: rgb(1, 233, 250);}
+    65%  {background: rgb(0, 255, 213);}
+    70% {background: rgb(1, 233, 250);}
+    75%  {background: rgb(0, 255, 213);}
+    80%  {background: rgb(1, 233, 250);}
+    85%  {background: rgb(0, 255, 213);}
+    90% {background: rgb(1, 233, 250);}
+    95%  {background: rgb(0, 255, 213);}
+    100%  {background: rgb(1, 233, 250);}
   }
 
+  @-webkit-keyframes colorchange /* Safari and Chrome - necessary duplicate */
+  
+  {
+    0%  {background: rgb(1, 233, 250);}
+    5%  {background: rgb(0, 255, 213);}
+    10% {background: rgb(1, 233, 250);}
+    15%  {background: rgb(0, 255, 213);}
+    20%  {background: rgb(1, 233, 250);}
+    25%  {background: rgb(0, 255, 213);}
+    30% {background: rgb(1, 233, 250);}
+    35%  {background: rgb(0, 255, 213);}
+    40%  {background: rgb(1, 233, 250);}
+    45%  {background: rgb(0, 255, 213);}
+    50% {background: rgb(1, 233, 250);}
+    55%  {background: rgb(0, 255, 213);}
+    60%  {background: rgb(1, 233, 250);}
+    65%  {background: rgb(0, 255, 213);}
+    70% {background: rgb(1, 233, 250);}
+    75%  {background: rgb(0, 255, 213);}
+    80%  {background: rgb(1, 233, 250);}
+    85%  {background: rgb(0, 255, 213);}
+    90% {background: rgb(1, 233, 250);}
+    95%  {background: rgb(0, 255, 213);}
+    100%  {background: rgb(1, 233, 250);}
+  
+}
 #logo {
     width: 500px;
     position: fixed;
@@ -64,27 +65,88 @@ body {
 
    
 }
+
+#button-text {
+    
+}
+
  #button-1 {
     position: fixed;
     bottom: 20%;
     left: 32%;
     width: 400px;
     border-radius: 7px;
-    background-color: #d80e0e;
+    background-color:#5525f0;
+    
+    /*
+    animation: colorchangeagain 10s; /* animation-name followed by duration in seconds*/
+    /* you could also use milliseconds (ms) or something like 2.5s */
+/* -webkit-animation: colorchangeagain 50s; /* Chrome and Safari */      
+/*
+}
+
+@keyframes colorchangeagain
+
+{
+    0%  {background: #5525f0;}
+    5%  {background: rgb(1, 179, 250);}
+    10% {background: #5525f0;}
+    15%  {background: rgb(1, 179, 250);}
+    20%  {background: #5525f0;}
+    25%  {background: rgb(1, 179, 250);}
+    30% {background: #5525f0;}
+    35%  {background: rgb(1, 179, 250);}
+    40%  {background: #5525f0}
+    45%  {background: rgb(1, 179, 250);}
+    50% {background: #5525f0;}
+    55%  {background: rgb(1, 179, 250);}
+    60%  {background: rgb(1, 179, 250);}
+    65%  {background: #5525f0;}
+    70% {background: rgb(1, 179, 250);}
+    75%  {background: rgb(1, 179, 250);}
+    80%  {background: #5525f0;}
+    85%  {background: rgb(1, 179, 250);}
+    90% {background: #5525f0;}
+    95%  {background: rgb(1, 179, 250);}
+    100%  {background: #5525f0;}
+   }
+
+@-webkit-keyframes colorchangeagain /* Safari and Chrome - necessary duplicate */
+/*
+{
+    0%  {background: #5525f0;}
+    5%  {background: rgb(1, 179, 250);}
+    10% {background: #5525f0;}
+    15%  {background: rgb(1, 179, 250);}
+    20%  {background: #5525f0;}
+    25%  {background: rgb(1, 179, 250);}
+    30% {background: #5525f0;}
+    35%  {background: rgb(1, 179, 250);}
+    40%  {background: #5525f0}
+    45%  {background: rgb(1, 179, 250);}
+    50% {background: #5525f0;}
+    55%  {background: rgb(1, 179, 250);}
+    60%  {background: rgb(1, 179, 250);}
+    65%  {background: #5525f0;}
+    70% {background: rgb(1, 179, 250);}
+    75%  {background: rgb(1, 179, 250);}
+    80%  {background: #5525f0;}
+    85%  {background: rgb(1, 179, 250);}
+    90% {background: #5525f0;}
+    95%  {background: rgb(1, 179, 250);}
+    100%  {background: #5525f0;}
+   }
+ 
+*/
 
  }
+
+ 
 
  #button-1:hover {
      opacity: 0.9;
      -webkit-animation: none;
  }
-.pulse {
-    animation-name: stretch;
-    animation-duration: 1.5s;
-    animation-timing-function: ease-out;
-    animation-delay: 0s;
-    animation-play-state: running;
-}
 
 /*
 
@@ -93,11 +155,4 @@ body {
   
 
 
-
-<div class="pulse">
-<img src="assets/images/logo1.png" class="pulse" id="logo">
-</div>
-
-
-<a class="btn btn-floating btn-large pulse" id="button-1"><i class="material-icons">TELL ME WHAT I WANT TO EAT!</i></a>
 
