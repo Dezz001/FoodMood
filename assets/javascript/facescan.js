@@ -37,6 +37,7 @@ var constraints = {
       var x = canvas.toDataURL();
       console.log(x)
       window.location.href='results-index.html'
-      console.log(x)
   };
+
+ 
  
