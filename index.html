@@ -10,7 +10,7 @@
 
 	<!-- External Asset Stylesheets -->
 	<!-- <link rel="stylesheet" type="text/css" href="assets/css/reset.css"> -->
-	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<!-- <link rel="stylesheet" type="text/css" href="assets/css/style.css"> -->
 
 	<!-- jQuery 1.x -->
 	<script
@@ -24,13 +24,13 @@
 	</script>
 
 	<!-- AJAX -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
 
     <!-- Firebase JavaScript Link -->
-    <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+   <!--  <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script> -->
 
 	<!-- Added Moment JS -->
-	<script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+	<!-- <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script> -->
 
 	<!-- Added Materialize -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
@@ -54,7 +54,104 @@
 		
 		
 
+
 <script src="assets/javascript/app.js"></script>
+
+	<!-- Blah Blah Blah -->
+
+
+<div class="camera">
+    <video id="video"></video>
+    <button id="start-camera"> Use this Photo </button>
+    <input type="file" accept="image/*;capture=camera">
+</div>
+<div>
+	<video autoplay></video>
+	<canvas id="canvas" width="640" height="360"></canvas>
+</div>
+<!-- The <a> tag defines a hyperlink, which is used to link from one page to another.  The most important attribute of the <a> element is the href attribute, which indicates the link's destination.-->
+
+<a id="dl-btn" href="canvas" download="mySelfie.png"> Save Photo </a>
+
+
+	
+
+
+<canvas id="canvas">
+</canvas>
+  
+
+<script type="text/javascript">
+
+window.onload = function() {
+  var startPos;
+  navigator.geolocation.getCurrentPosition(function(position) {
+  	console.log(position);
+    // same as above
+  }, function(error) {
+    alert('Error occurred. Error code: ' + error.code);
+    // error.code can be:
+    //   0: unknown error
+    //   1: permission denied
+    //   2: position unavailable (error response from locaton provider)
+    //   3: timed out
+  });
+};
+
+// define constraints, audio, video or both
+var constraints = {
+  video: {
+    mandatory: {
+      maxWidth: 640,
+      maxHeight: 360
+    }
+  }
+};
+
+// MediaDevices.getUserMedia()  With the user's permission through a prompt, turns on a camera or screensharing and/or a microphone on the system and provides a MediaStream containing a video track and/or an audio track with the input.
+navigator.mediaDevices.getUserMedia(constraints)
+
+.then(function(stream) {
+        video.srcObject = stream;
+        video.play();
+    })
+    .catch(function(err) {
+        console.log("An error occured! " + err);
+    });
+
+// The querySelector() method returns the first element that matches a specified CSS selector(s) in the document.
+  var video = document.querySelector("#video");
+  var canvas = document.querySelector("#canvas");
+  var ctx = canvas.getContext("video");
+  var localMediaStream = document.querySelector(video.srcObject);
+
+  function snapshot() {
+  	    if (localMediaStream) {
+      ctx.drawImage(video, 0, 0);
+      document.querySelector('img').src = canvas.toDataURL('image/webp');
+    }
+  }
+
+document.querySelector("#start-camera").onclick = function(e) {
+	canvas.getContext("2d").drawImage(video, 0, 0);
+	var x = canvas.toDataURL();
+	console.log(x)
+};
+
+	// <!-- Output Table -->
+
+
+
+
+
+	// <!-- Submit Form  -->
+
+
+
+	// <!-- 	Java Code from game.js -->
+	// <script src="assets/javascript/app.js">
+		
+</script>
 
 </body>
 
