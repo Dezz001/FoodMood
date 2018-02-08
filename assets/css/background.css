@@ -1,8 +1,8 @@
 body {
     
-     animation: colorchange 10s; /* animation-name followed by duration in seconds*/
+     animation: colorchange 100s; /* animation-name followed by duration in seconds*/
         /* you could also use milliseconds (ms) or something like 2.5s */
-    -webkit-animation: colorchange 50s; /* Chrome and Safari */
+    
   }
  
    @keyframes colorchange
@@ -57,58 +57,3 @@ body {
      100%  {background: rgb(1, 233, 250);}
    
  }
-
-.emoji {
-    width: 250px;
-}
-#main-content {
-
-}
-
-#sub-content {
-    text-align: center;
- }
-
- #button-1 {
-    position: fixed;
-    bottom: 130px;
-    left: 15%;
-    width: 400px;
-    border-radius: 7px;
-    background-color:#5525f0;
- }
-
- #button-1:hover {
-    opacity: 0.9;
-    -webkit-animation: none;
-}
-
-
- #button-2 {
-    position: fixed;
-    bottom: 130px;
-    right: 15%;
-    width: 400px;
-    border-radius: 7px;
-    background-color:#5525f0;
- }
-
- #button-2:hover {
-    opacity: 0.9;
-    -webkit-animation: none;
-}
-
-
-#emotion-text {
-    border-radius: 7px;
-}
-
-#emoji-display {
-    margin-top: 8%;
-    text-align: center;
-    
-}
-
-#emotion-display-text {
-    font-size: 80px;
-}

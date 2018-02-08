@@ -1,0 +1,27 @@
+#video-display {
+    position: fixed;
+    left: 22%;
+}
+
+video {
+    width: 600px;
+}
+
+#lowkey {
+    visibility: hidden;
+}
+
+#start-camera {
+    position: fixed;
+    bottom: 100px;
+    left: 32%;
+    width: 400px;
+    border-radius: 7px;
+    background-color:#5525f0;
+    color: white;
+}
+
+#start-camera:hover {
+    opacity: 0.9;
+
+}

@@ -1,8 +1,8 @@
 body {
    
-    animation: colorchange 10s; /* animation-name followed by duration in seconds*/
+    animation: colorchange 100s; /* animation-name followed by duration in seconds*/
        /* you could also use milliseconds (ms) or something like 2.5s */
-   -webkit-animation: colorchange 50s; /* Chrome and Safari */
+   
  }
 
   @keyframes colorchange
@@ -72,7 +72,7 @@ body {
 
  #button-1 {
     position: fixed;
-    bottom: 20%;
+    bottom: 160px;
     left: 32%;
     width: 400px;
     border-radius: 7px;
