@@ -10,7 +10,7 @@
 
 	<!-- External Asset Stylesheets -->
 	<!-- <link rel="stylesheet" type="text/css" href="assets/css/reset.css"> -->
-	<!-- <link rel="stylesheet" type="text/css" href="assets/css/style.css"> -->
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
 	<!-- jQuery 1.x -->
 	<script
@@ -24,7 +24,7 @@
 	</script>
 
 	<!-- AJAX -->
-	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
     <!-- Firebase JavaScript Link -->
    <!--  <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script> -->
@@ -35,68 +35,44 @@
 	<!-- Added Materialize -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
 
-
 	
 </head>
 
-
 <body>
-
-	<!-- Header -->
- 
 	
 	<div class="pulse">
 		<img src="assets/images/logo1.2.png" class="pulse" id="logo">
 		</div>
 
-		
 		<a class="btn btn-floating btn-large pulse" id="button-1"><i class="material-icons" id="button-text">TELL ME WHAT I WANT TO EAT!</i></a>
 		
-		
-
-
-<script src="assets/javascript/app.js"></script>
-
-	<!-- Blah Blah Blah -->
-
-
 <div class="camera">
     <video id="video"></video>
-    <button id="start-camera"> Use this Photo </button>
-    <input type="file" accept="image/*;capture=camera">
+    <button id="start-camera"> Smile </button>
 </div>
 <div>
 	<video autoplay></video>
 	<canvas id="canvas" width="640" height="360"></canvas>
-</div>
-<!-- The <a> tag defines a hyperlink, which is used to link from one page to another.  The most important attribute of the <a> element is the href attribute, which indicates the link's destination.-->
-
-<a id="dl-btn" href="canvas" download="mySelfie.png"> Save Photo </a>
-
-
-	
-
-
-<canvas id="canvas">
-</canvas>
   
+</div>
+
+<button id="test1" type=submit></button>
 
 <script type="text/javascript">
 
-window.onload = function() {
-  var startPos;
-  navigator.geolocation.getCurrentPosition(function(position) {
-  	console.log(position);
-    // same as above
-  }, function(error) {
-    alert('Error occurred. Error code: ' + error.code);
-    // error.code can be:
-    //   0: unknown error
-    //   1: permission denied
-    //   2: position unavailable (error response from locaton provider)
-    //   3: timed out
-  });
-};
+// window.onload = function() {
+//   var startPos;
+//   navigator.geolocation.getCurrentPosition(function(position) {
+//     // same as above
+//   }, function(error) {
+//     alert('Error occurred. Error code: ' + error.code);
+//     // error.code can be:
+//     //   0: unknown error
+//     //   1: permission denied
+//     //   2: position unavailable (error response from locaton provider)
+//     //   3: timed out
+//   });
+// };
 
 // define constraints, audio, video or both
 var constraints = {
@@ -134,9 +110,29 @@ navigator.mediaDevices.getUserMedia(constraints)
 
 document.querySelector("#start-camera").onclick = function(e) {
 	canvas.getContext("2d").drawImage(video, 0, 0);
-	var x = canvas.toDataURL();
-	console.log(x)
-};
+	var snap = canvas.toDataURL();
+	console.log(snap)
+
+// Need a name for emoji face "button"
+ $("#button-1").on("click", function() {
+      var queryURL = "https://api-us.faceplusplus.com/facepp/v3/detect";
+      // the ajax will call to the URL with a promise to return the data when it is available. 
+      $.ajax({
+        url: queryURL,
+        method: "POST",
+        data: {
+          api_key:"p6UKO6ReXnPt97o_onB63zBEqgN9lid",
+          api_secret:"j6FMcivnXOlnv9V9JXem932TziruiJby",
+          image_base64: "snap",
+          return_attributes: "emotion"
+        }
+      }).done(function(response) {
+
+      var results = response.data;
+      console.log(results);
+      });
+    });
+    };
 
 	// <!-- Output Table -->
 
@@ -146,10 +142,6 @@ document.querySelector("#start-camera").onclick = function(e) {
 
 	// <!-- Submit Form  -->
 
-
-
-	// <!-- 	Java Code from game.js -->
-	// <script src="assets/javascript/app.js">
 		
 </script>
 
