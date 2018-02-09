@@ -85,8 +85,8 @@
 
 window.onload = function() {
   var startPos;
-  navigator.geolocation.getCurrentPosition(function(position) {
-  	console.log(position);
+  var whereAmI = navigator.geolocation.getCurrentPosition(function(position) {
+  	console.log("Where am I: " + position)
     // same as above
   }, function(error) {
     alert('Error occurred. Error code: ' + error.code);
