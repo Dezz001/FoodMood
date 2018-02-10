@@ -4,11 +4,43 @@
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
     <title>Places Searchbox</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- External Asset Stylesheets -->
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/background.css">
+
+    <!-- jQuery 1.x -->
+    <script
+      src="https://code.jquery.com/jquery-1.12.4.js"
+      integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU="
+      crossorigin="anonymous">
+    </script>
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous">
+    </script>
+
+    <!-- AJAX -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
+
+      <!-- Firebase JavaScript Link -->
+     <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script> 
+
+    <!-- Added Moment JS -->
+     <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script> 
+
+    <!-- Added Materialize -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+
     <style>
       /* Always set the map height explicitly to define the size of the div
        * element that contains the map. */
       #map {
-        height: 100%;
+        height: 75%;
       }
       /* Optional: Makes the sample page fill the window. */
       html, body {
@@ -89,17 +121,23 @@
     </style>
   </head>
   <body>
-    <input id="pac-input" class="controls" type="text" placeholder="Search Box">
+    <button id="pac-input" class="controls pulse btn" type="text" style="color: white; background: #5525f0" placeholder="Search Box">Push For Mood Food</button>
+
+    <!-- <input id="pac-input" class="controls pulse btn" type="text" style="text-color: white; background: #5525f0" placeholder="Search Box"></input> -->
+
+    <a href="index.html" class="btn btn-floating btn-large pulse" style="margin-left: 30px">Start Over</a>
+
     <div id="map"></div>
+
     <script>
-      // This example adds a search box to a map, using the Google Place Autocomplete
-      // feature. People can enter geographical searches. The search box will return a
-      // pick list containing a mix of places and predicted search terms.
+      
+      var foodValue = ""
+      foodValue="fast food";
 
-      // This example requires the Places library. Include the libraries=places
-      // parameter when you first load the API. For example:
-      // <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
+      $("#pac-input").val(foodValue)
+      
 
+      // Charlotte Coordinates
       function initAutocomplete() {
         var map = new google.maps.Map(document.getElementById('map'), {
           center: {lat: 35.2264781, lng: -80.8455777},
@@ -107,10 +145,18 @@
           mapTypeId: 'roadmap'
         });
 
-        // Create the search box and link it to the UI element.
+
+        // Create the search box and link it to the UI. 
+        // document.getElementById("pac-input").innerHTML;
         var input = document.getElementById('pac-input');
+       
         var searchBox = new google.maps.places.SearchBox(input);
+        
         map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
+        
+        // General testing and debugging
+        console.log("Search Box: " + searchBox);
+        console.log("Input: " + input);
 
         // Bias the SearchBox results towards current map's viewport.
         map.addListener('bounds_changed', function() {
@@ -118,8 +164,8 @@
         });
 
         var markers = [];
-        // Listen for the event fired when the user selects a prediction and retrieve
-        // more details for that place.
+
+        // Search Box listens for entry and predicts possible entry
         searchBox.addListener('places_changed', function() {
           var places = searchBox.getPlaces();
 
@@ -157,6 +203,7 @@
             }));
 
             if (place.geometry.viewport) {
+              
               // Only geocodes have viewport.
               bounds.union(place.geometry.viewport);
             } else {
@@ -168,7 +215,11 @@
       }
 
     </script>
+    
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC9Nxq_V-i-Qjj-vLH4J19yWCvMyYKRMBU&libraries=places&callback=initAutocomplete"
          async defer></script>
+
+    <script src="assets/javascript/app.js"></script>
+
   </body>
 </html>
