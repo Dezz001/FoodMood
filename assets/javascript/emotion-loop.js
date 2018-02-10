@@ -1,6 +1,6 @@
 if (highestVal.emotion == "anger") {
     //display the anger emoji in the div (#emoji-display) along with the word "ANGRY" in the div (#emotion-text) on the results-index page
-    $("#emoji-display").attr('src', 'assets/images/angry-emoji.png');
+    $("#emotion-display").attr('src', 'assets/images/angry-emoji.png');
     $("#emoji-text").text('ANGRY');
 
 } else if (highestVal.emotion = "disgust") {
