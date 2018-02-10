@@ -3,14 +3,15 @@
 
 <head>
 	<meta charset="UTF-8">
-	<title>Food Mood | Team Jarvis -  Darrin Davis, Ethan Rogers, Jaclyn Pajor, Donna England </title>
+	<title>Mood Food</title>
 
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
 	<!-- External Asset Stylesheets -->
-	<!-- <link rel="stylesheet" type="text/css" href="assets/css/reset.css"> -->
+	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/background.css">
 
 	<!-- jQuery 1.x -->
 	<script
@@ -24,13 +25,13 @@
 	</script>
 
 	<!-- AJAX -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
 
     <!-- Firebase JavaScript Link -->
-   <!--  <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script> -->
+   <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script> 
 
 	<!-- Added Moment JS -->
-	<!-- <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script> -->
+	 <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script> 
 
 	<!-- Added Materialize -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
@@ -44,35 +45,30 @@
 		<img src="assets/images/logo1.2.png" class="pulse" id="logo">
 		</div>
 
-		<a class="btn btn-floating btn-large pulse" id="button-1"><i class="material-icons" id="button-text">TELL ME WHAT I WANT TO EAT!</i></a>
 		
-<div class="camera">
-    <video id="video"></video>
-    <button id="start-camera"> Smile </button>
-</div>
-<div>
-	<video autoplay></video>
-	<canvas id="canvas" width="640" height="360"></canvas>
-  
-</div>
+		<a href="index-FaceScan.html" class="btn btn-floating btn-large pulse" id="button-1"><i class="material-icons" id="button-text">WHAT DO I WANT TO EAT?</i></a>
+		
 
-<button id="test1" type=submit></button>
+<canvas id="canvas">
+</canvas>
+  
 
 <script type="text/javascript">
 
-// window.onload = function() {
-//   var startPos;
-//   navigator.geolocation.getCurrentPosition(function(position) {
-//     // same as above
-//   }, function(error) {
-//     alert('Error occurred. Error code: ' + error.code);
-//     // error.code can be:
-//     //   0: unknown error
-//     //   1: permission denied
-//     //   2: position unavailable (error response from locaton provider)
-//     //   3: timed out
-//   });
-// };
+window.onload = function() {
+  var startPos;
+  var whereAmI = navigator.geolocation.getCurrentPosition(function(position) {
+  	console.log("Where am I: " + position)
+    // same as above
+  }, function(error) {
+    alert('Error occurred. Error code: ' + error.code);
+    // error.code can be:
+    //   0: unknown error
+    //   1: permission denied
+    //   2: position unavailable (error response from locaton provider)
+    //   3: timed out
+  });
+};
 
 // define constraints, audio, video or both
 var constraints = {
@@ -104,7 +100,7 @@ navigator.mediaDevices.getUserMedia(constraints)
   var localMediaStream = document.querySelector(video.srcObject);
 
   function snapshot() {
-  	  if (localMediaStream) {
+  	    if (localMediaStream) {
       ctx.drawImage(video, 0, 0);
       document.querySelector('img').src = canvas.toDataURL('image/webp');
     }
@@ -182,6 +178,7 @@ document.querySelector("#start-camera").onclick = function(e) {
       sessionStorage.setItem("emotion", highestVal.emotion);
       });
     });
+
 };
 
 	// <!-- Output Table -->
@@ -190,7 +187,15 @@ document.querySelector("#start-camera").onclick = function(e) {
 
 	// <!-- Submit Form  -->
 
+
+
+	// <!-- 	Java Code from game.js -->
+	// <script src="assets/javascript/app.js">
+
+<script src="assets/javascript/app.js"></script>
+
 		
+
 </script>
 
 </body>
