@@ -33,7 +33,6 @@ var constraints = {
     snapReduced = snap.replace("data:image/png;base64,", "");
     window.location.href='results-index.html'
 
-      // console.log(snapReduced)
   // Need a name for emoji face "button"
     $("#start-camera").on("click", function() {
         var queryURL = "https://cors-anywhere.herokuapp.com/https://api-us.faceplusplus.com/facepp/v3/detect";
@@ -97,10 +96,9 @@ var constraints = {
         sessionStorage.clear();
 
         sessionStorage.setItem("emotion", highestVal.emotion);
-        });
-      });
-    };
-  
+  });
+});
+
   
  
  

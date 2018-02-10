@@ -44,8 +44,8 @@ Darrin - use google maps to find places to eat
 
 
 *********** Future 
-....allow user to avoid use of camera and select an emotion
-....allow user to avoid geolocation and manually enter a zip code
+....allow user to avoid use of camera and select an emotion  (set default emotion)
+....allow user to avoid geolocation and manually enter a zip code  (set default location)
 ....show local events in addtion to local restaurants based on emotion
 
 ******* still need
