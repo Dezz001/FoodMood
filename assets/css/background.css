@@ -57,3 +57,16 @@ body {
      100%  {background: rgb(1, 233, 250);}
    
  }
+
+ /*For browser/screen widths less than 768px*/
+@media screen and (max-width: 768px) {
+  .container {
+      max-width: 100%;
+  }
+  .content {
+      width: 100%;
+  }
+  .sidebar {
+      width: 100%;
+  }
+}
