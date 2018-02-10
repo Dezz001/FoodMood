@@ -8,3 +8,9 @@ $("#yes-button").on("click", function (){
 	
 	
 });
+
+
+$(document).on('ready', function (){
+	console.log(higestVal.emotion);
+
+})
