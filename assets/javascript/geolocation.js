@@ -5,6 +5,7 @@ window.onload = function() {
       // same as above
     }, function(error) {
       alert('Error occurred. Error code: ' + error.code);
+      //  *******   need to add a default location
       // error.code can be:
       //   0: unknown error
       //   1: permission denied
