@@ -50,54 +50,52 @@
 
     <script>
 
-    // Testing Food Search prior to building out developing mood text search 
-    // var foodValue = "mexican foods";    
-    // $("#pac-input").val(foodValue)
-    // console.log(foodValue)
-
-
     var foodValue;
     whichFood();
 
+    // Matches Mood with Food Type
     function whichFood(){
       
+      var mood = sessionStorage.getItem('emotion');
 
-      var myFood = document.getElementById("emoji-display-text");
+      console.log("Mood: " + mood);
 
-      if (myFood === "angry") {
+
+      if (mood === "anger") {
         foodValue = "all you can eat";
       }
 
-      else if (myFood === "disgusted") {
+      else if (mood === "disgust") {
         foodValue = "fast food"; 
       }
 
-      else if (myFood === "fearful") {
-        foodValue = "fast food"; 
+      else if (mood === "fear") {
+        foodValue = "salads"; 
       }
 
-      else if (myFood === "happy") {
+      else if (mood === "happiness") {
         foodValue = "mexican food"; 
       }
 
-      else if (myFood === "neutral") {
+      else if (mood === "neutral") {
         foodValue = "diner"; 
       }
 
-      else if (myFood === "sad") {
+      else if (mood === "sadness") {
         foodValue = "brewery"; 
       }
 
-      else if (myFood === "surprised") {
+      else if (mood === "surprise") {
         foodValue = "steak house"; 
       }
 
       else {
-        foodValue = "brain food"; 
+        mood = "brain food"; 
       }
 
+      // Testing and Debugging
       console.log("Food Value: " + foodValue)
-
+      console.log("Mood: " + mood);
 
     }
       
@@ -115,7 +113,6 @@
 
 
         // Create the search box and link it to the UI. 
-        // document.getElementById("pac-input").innerHTML;
         var input = document.getElementById('pac-input');
        
         var searchBox = new google.maps.places.SearchBox(input);
@@ -189,6 +186,7 @@
 
     <script src="assets/javascript/app.js"></script>
     <script src="assets/javascript/emotion-loop.js"></script>
+
     
 
   </body>
