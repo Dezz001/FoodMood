@@ -1,3 +1,4 @@
+
 var mood = sessionStorage.getItem('emotion');
 console.log(mood);
 
