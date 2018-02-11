@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
     <!-- External Asset Stylesheets -->
-    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <!-- <link rel="stylesheet" type="text/css" href="assets/css/reset.css"> -->
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <link rel="stylesheet" type="text/css" href="assets/css/background.css">
     <link rel="stylesheet" type="text/css" href="assets/css/foodMapping.css">
@@ -51,52 +51,58 @@
     <script>
 
     // Testing Food Search prior to building out developing mood text search 
-    var foodValue = "mexican foods";    
-    $("#pac-input").val(foodValue)
-    console.log(foodValue)
+    // var foodValue = "mexican foods";    
+    // $("#pac-input").val(foodValue)
+    // console.log(foodValue)
 
 
-    // whichFood();
+    var foodValue;
+    whichFood();
 
-    // function whichFood(){
-    //   var foodValue = "";
-
-    //   console.log(foodValue)
-
-    //   if (#emotion-display-text = "hangry") {
-    //     foodValue="all you can eat";
-    //   }
-
-    //   else if (#emotion-display-text = "disgust") {
-    //     foodValue="fast food"; 
-    //   }
-
-    //   else if (#emotion-display-text = "fear") {
-    //     foodValue="fast food"; 
-    //   }
-
-    //   else if (#emotion-display-text = "happiness") {
-    //     foodValue="mexican food"; 
-    //   }
-
-    //   else if (#emotion-display-text = "neutral") {
-    //     foodValue="diner"; 
-    //   }
-
-    //   else if (#emotion-display-text = "sadness") {
-    //     foodValue="brewery"; 
-    //   }
-
-    //   else if (#emotion-display-text = "surprise") {
-    //     foodValue="steak house"; 
-    //   }
-
-
-    //   $("#pac-input").val(foodValue)
-
-    // }
+    function whichFood(){
       
 
+      var myFood = document.getElementById("emoji-display-text");
+
+      if (myFood === "angry") {
+        foodValue = "all you can eat";
+      }
+
+      else if (myFood === "disgusted") {
+        foodValue = "fast food"; 
+      }
+
+      else if (myFood === "fearful") {
+        foodValue = "fast food"; 
+      }
+
+      else if (myFood === "happy") {
+        foodValue = "mexican food"; 
+      }
+
+      else if (myFood === "neutral") {
+        foodValue = "diner"; 
+      }
+
+      else if (myFood === "sad") {
+        foodValue = "brewery"; 
+      }
+
+      else if (myFood === "surprised") {
+        foodValue = "steak house"; 
+      }
+
+      else {
+        foodValue = "brain food"; 
+      }
+
+      console.log("Food Value: " + foodValue)
+
+
+    }
+      
+      
+      $("#pac-input").val(foodValue)
 
 
       // Charlotte Coordinates
@@ -183,8 +189,7 @@
 
     <script src="assets/javascript/app.js"></script>
     <script src="assets/javascript/emotion-loop.js"></script>
-    <script src="assets/javascript/emotion-loop.js"></script>
-    <script src="results-index.html"></script>
+    
 
   </body>
 </html>
