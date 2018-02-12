@@ -31,9 +31,8 @@ var constraints = {
       canvas.getContext("2d").drawImage(video, 0, 0);
       var snap = canvas.toDataURL();
     snapReduced = snap.replace("data:image/png;base64,", "");
-    window.location.href='results-index.html'
+   
 
-      // console.log(snapReduced)
   // Need a name for emoji face "button"
     $("#start-camera").on("click", function() {
         var queryURL = "https://cors-anywhere.herokuapp.com/https://api-us.faceplusplus.com/facepp/v3/detect";
@@ -91,16 +90,16 @@ var constraints = {
         for (var i = 0; i < emotionArray.length; i++) {
           if (emotionArray[i].value > highestVal.value) {
             highestVal = emotionArray[i];
-          }      }
-        console.log(highestVal.emotion);
+          };
+        };
 
         sessionStorage.clear();
-
         sessionStorage.setItem("emotion", highestVal.emotion);
-        });
-      });
-    };
-  
+        window.location.href='results-index.html'
+  });
+});
+};
+
   
  
  
