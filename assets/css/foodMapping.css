@@ -21,7 +21,14 @@ button {
 /* Always set the map height explicitly to define the size of the div
    * element that contains the map. */
   #map {
-    height: 100%;
+
+    height: 75%;
+    width: 80%;
+    margin-top: 20px!important;
+    margin-left: 120px;
+    
+   
+
   }
   /* Optional: Makes the sample page fill the window. */
   html, body {
@@ -71,17 +78,15 @@ button {
     font-weight: 300;
   }
 
-  #button-4 {
-    width: 400px;
-    border-radius: 7px;
-    background-color:#5525f0;
-    color: white;
-    height: 50px;
-    position: fixed;
-    left: 32%!important;
-    top: 1.4%!important;
-    
-  }
+
+  #pac-input {
+   background-color: #5525f0;
+   width: 400px;
+   position: fixed;
+   left: 28.5%!important;
+   top: 2%!important;
+   
+
   #startover-btn {
     width: 200px;
     border-radius: 7px;
@@ -103,6 +108,24 @@ button {
     color: white;
   }
 
+  #startover {
+    background-color: #5525f0;
+    width: 300px;
+    position: fixed;
+    bottom: 65px;
+    right: 40%;
+
+    
+  }
+
+  #left-content {
+    background-color: white;
+    width: 300px;
+    height: 100px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+  }
 
 
   #title {
@@ -112,6 +135,7 @@ button {
     font-weight: 500;
     padding: 6px 12px;
   }
+    
   #target {
     width: 345px;
   }

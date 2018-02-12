@@ -3,7 +3,7 @@
   <head>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
-    <title>Places Searchbox</title>
+    <title>Food For Your Mood</title>
 
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -40,74 +40,60 @@
 
   </head>
   <body>
+
+    <button id="pac-input" class="controls pulse btn">Push For Mood Food</button>
     
-    <div class="container" id="btn-space">
-        <button id="button-4" class=" pulse btn" type="text">Push For Mood Food</button>
-        
-      
+  
+    <a href="index.html" class="btn" id="startover">Start Over</a>
+
+    <div id="map">
       
     </div>
-    
-          
-    <div id="map"></div>
-    <a href="index.html" class=" btn" id="startover-btn">Home Page</a>
+
 
     <script>
-
     var foodValue;
     whichFood();
-
     // Matches Mood with Food Type
     function whichFood(){
       
       var mood = sessionStorage.getItem('emotion');
 
+
       $("#button-4").val(foodValue)
+
       console.log("Mood: " + mood);
-
-
       if (mood === "anger") {
         foodValue = "all you can eat restaurants";
       }
-
       else if (mood === "disgust") {
         foodValue = "fast food"; 
       }
-
       else if (mood === "fear") {
         foodValue = "salads"; 
       }
-
       else if (mood === "happiness") {
         foodValue = "mexican food"; 
       }
-
       else if (mood === "neutral") {
         foodValue = "diner"; 
       }
-
       else if (mood === "sadness") {
         foodValue = "brewery"; 
       }
-
       else if (mood === "surprise") {
         foodValue = "steak house"; 
       }
-
       else {
         mood = "brain food"; 
       }
-
       // Testing and Debugging
       console.log("Food Value: " + foodValue)
       console.log("Mood: " + mood);
-
     }
       
       
       $("#pac-input").val(foodValue)
-
-
       // Charlotte Coordinates
       function initAutocomplete() {
         var map = new google.maps.Map(document.getElementById('map'), {
@@ -115,8 +101,6 @@
           zoom: 13,
           mapTypeId: 'roadmap'
         });
-
-
         // Create the search box and link it to the UI. 
         // document.getElementById("button-4").innerHTML;
         var input = document.getElementById('button-4');
@@ -128,28 +112,22 @@
         // General testing and debugging
         console.log("Search Box: " + searchBox);
         console.log("Input: " + input);
-
         // Bias the SearchBox results towards current map's viewport.
         map.addListener('bounds_changed', function() {
           searchBox.setBounds(map.getBounds());
         });
-
         var markers = [];
-
         // Search Box listens for entry and predicts possible entry
         searchBox.addListener('places_changed', function() {
           var places = searchBox.getPlaces();
-
           if (places.length == 0) {
             return;
           }
-
           // Clear out the old markers.
           markers.forEach(function(marker) {
             marker.setMap(null);
           });
           markers = [];
-
           // For each place, get the icon, name and location.
           var bounds = new google.maps.LatLngBounds();
           places.forEach(function(place) {
@@ -164,7 +142,6 @@
               anchor: new google.maps.Point(17, 34),
               scaledSize: new google.maps.Size(25, 25)
             };
-
             // Create a marker for each place.
             markers.push(new google.maps.Marker({
               map: map,
@@ -172,7 +149,6 @@
               title: place.name,
               position: place.geometry.location
             }));
-
             if (place.geometry.viewport) {
               
               // Only geocodes have viewport.
@@ -184,7 +160,6 @@
           map.fitBounds(bounds);
         });
       }
-
     </script>
     
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC9Nxq_V-i-Qjj-vLH4J19yWCvMyYKRMBU&libraries=places&callback=initAutocomplete"
