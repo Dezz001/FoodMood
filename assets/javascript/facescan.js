@@ -92,7 +92,6 @@ var constraints = {
             highestVal = emotionArray[i];
           };
         };
-        console.log(highestVal.emotion);
 
         sessionStorage.clear();
         sessionStorage.setItem("emotion", highestVal.emotion);

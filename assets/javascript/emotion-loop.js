@@ -1,10 +1,11 @@
+
 var mood = sessionStorage.getItem('emotion');
 console.log(mood);
 
 if (mood == "anger") {
    //Display the anger emoji in the div (#emoji-display) along with the word "ANGRY" in the div (#emotion-text) on the results-index page
    $("#emoji-display").attr('src', 'assets/images/angry-emoji.png');
-   $("#emotion-display-text").text('ANGRY');
+   $("#emotion-display-text").text('HANGRY');
 
 } else if (mood == "disgust") {
    $("#emoji-display").attr('src', 'assets/images/disgust-emoji.png');

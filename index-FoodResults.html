@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
     <!-- External Asset Stylesheets -->
-    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <!-- <link rel="stylesheet" type="text/css" href="assets/css/reset.css"> -->
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <link rel="stylesheet" type="text/css" href="assets/css/background.css">
     <link rel="stylesheet" type="text/css" href="assets/css/foodMapping.css">
@@ -53,12 +53,60 @@
     <a href="index.html" class=" btn" id="startover-btn">Home Page</a>
 
     <script>
+
+    var foodValue;
+    whichFood();
+
+    // Matches Mood with Food Type
+    function whichFood(){
       
-      var foodValue = ""
-      foodValue="fast food";
+      var mood = sessionStorage.getItem('emotion');
 
       $("#button-4").val(foodValue)
+      console.log("Mood: " + mood);
+
+
+      if (mood === "anger") {
+        foodValue = "all you can eat restaurants";
+      }
+
+      else if (mood === "disgust") {
+        foodValue = "fast food"; 
+      }
+
+      else if (mood === "fear") {
+        foodValue = "salads"; 
+      }
+
+      else if (mood === "happiness") {
+        foodValue = "mexican food"; 
+      }
+
+      else if (mood === "neutral") {
+        foodValue = "diner"; 
+      }
+
+      else if (mood === "sadness") {
+        foodValue = "brewery"; 
+      }
+
+      else if (mood === "surprise") {
+        foodValue = "steak house"; 
+      }
+
+      else {
+        mood = "brain food"; 
+      }
+
+      // Testing and Debugging
+      console.log("Food Value: " + foodValue)
+      console.log("Mood: " + mood);
+
+    }
       
+      
+      $("#pac-input").val(foodValue)
+
 
       // Charlotte Coordinates
       function initAutocomplete() {
@@ -143,6 +191,9 @@
          async defer></script>
 
     <script src="assets/javascript/app.js"></script>
+    <script src="assets/javascript/emotion-loop.js"></script>
+
+    
 
   </body>
 </html>
