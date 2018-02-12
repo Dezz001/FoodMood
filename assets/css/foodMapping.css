@@ -1,5 +1,12 @@
-
- 
+button {
+  width: 400px;
+  border-radius: 7px;
+  background-color:#5525f0;
+  color: white;
+  height: 50px;
+  position: fixed;
+  left: 36%;
+}
 
 #button-1:hover {
  opacity: 0.9;
@@ -14,12 +21,14 @@
 /* Always set the map height explicitly to define the size of the div
    * element that contains the map. */
   #map {
+
     height: 75%;
     width: 80%;
     margin-top: 20px!important;
     margin-left: 120px;
     
    
+
   }
   /* Optional: Makes the sample page fill the window. */
   html, body {
@@ -69,6 +78,7 @@
     font-weight: 300;
   }
 
+
   #pac-input {
    background-color: #5525f0;
    width: 400px;
@@ -76,10 +86,26 @@
    left: 28.5%!important;
    top: 2%!important;
    
-  }
 
-  #pac-input:focus {
-    border-color: #4d90fe;
+  #startover-btn {
+    width: 200px;
+    border-radius: 7px;
+    background-color:#5525f0;
+    color: white;
+    height: 40px;
+    position: fixed;
+    left: 40%!important;
+    bottom: 1.4%!important;
+    
+  }
+#btn-space {
+  z-index: 99px;
+}
+  #startover-input {
+    width: 400px;
+    border-radius: 7px;
+    background-color:#5525f0;
+    color: white;
   }
 
   #startover {
@@ -101,6 +127,7 @@
     right: 20px;
   }
 
+
   #title {
     color: #fff;
     background-color: #4d90fe;
@@ -108,6 +135,7 @@
     font-weight: 500;
     padding: 6px 12px;
   }
+    
   #target {
     width: 345px;
   }
