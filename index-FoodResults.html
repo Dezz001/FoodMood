@@ -40,6 +40,7 @@
 
   </head>
   <body>
+
     <button id="pac-input" class="controls pulse btn">Push For Mood Food</button>
     
   
@@ -49,6 +50,7 @@
       
     </div>
 
+
     <script>
     var foodValue;
     whichFood();
@@ -56,6 +58,10 @@
     function whichFood(){
       
       var mood = sessionStorage.getItem('emotion');
+
+
+      $("#button-4").val(foodValue)
+
       console.log("Mood: " + mood);
       if (mood === "anger") {
         foodValue = "all you can eat restaurants";
@@ -96,7 +102,8 @@
           mapTypeId: 'roadmap'
         });
         // Create the search box and link it to the UI. 
-        var input = document.getElementById('pac-input');
+        // document.getElementById("button-4").innerHTML;
+        var input = document.getElementById('button-4');
        
         var searchBox = new google.maps.places.SearchBox(input);
         
