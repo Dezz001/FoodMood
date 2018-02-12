@@ -40,20 +40,24 @@
 
   </head>
   <body>
-    <button id="pac-input" class="controls pulse btn" type="text" style="color: white; background: #5525f0" placeholder="Search Box">Push For Mood Food</button>
-
-    <!-- <input id="pac-input" class="controls pulse btn" type="text" style="text-color: white; background: #5525f0" placeholder="Search Box"></input> -->
-
-    <a href="index.html" class="btn btn-floating btn-large pulse" style="margin-left: 30px">Start Over</a>
-
+    
+    <div class="container" id="btn-space">
+        <button id="button-4" class=" pulse btn" type="text">Push For Mood Food</button>
+        
+      
+      
+    </div>
+    
+          
     <div id="map"></div>
+    <a href="index.html" class=" btn" id="startover-btn">Home Page</a>
 
     <script>
       
       var foodValue = ""
       foodValue="fast food";
 
-      $("#pac-input").val(foodValue)
+      $("#button-4").val(foodValue)
       
 
       // Charlotte Coordinates
@@ -66,8 +70,8 @@
 
 
         // Create the search box and link it to the UI. 
-        // document.getElementById("pac-input").innerHTML;
-        var input = document.getElementById('pac-input');
+        // document.getElementById("button-4").innerHTML;
+        var input = document.getElementById('button-4');
        
         var searchBox = new google.maps.places.SearchBox(input);
         
